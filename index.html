@@ -3,12 +3,11 @@
   
 <head>
     <style>
-        * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
 body {
     height: 100vh;
     width: 100vw;
@@ -17,9 +16,8 @@ body {
 .background {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(255, 255, 255);
+    background-image: url('https://lh3.googleusercontent.com/pw/ADCreHdUzWRosJ_hKPSQBEt4d8tVxrasAYOV8jlm6vQp4x47lCWir_Hr14APtTNSO1sLNBx6iCwR0iLxZhJpdghf7eUJzf559sW9F32nA6dZ8XvYPWt0Lrk=w2400');
 }
-  
 .bird {
     height: 53px;
     width: 138px;
@@ -35,7 +33,7 @@ body {
     left: 100vw;
     height: 70vh;
     width: 6vw;
-    background-image: url('https://lh3.googleusercontent.com/pw/ADCreHebbyu5nBBV9VwdBNjVjqhkoon1uWPL5-Ctq6nti7vvCnC9vlG97wzndTWZ9ZaVefkrTmhNjxYhypCz26onnbzPz3sJvj03SO_L0tr5mGD6ot9GPZM=s32-p-k');
+    background-image: url("https://lh3.googleusercontent.com/pw/ADCreHc6tpC1nUVTGZ8rxxb8T6EtLhI_VFb3ZSeIV7SmMSQdRHtfURpBJn3hDTmVHR3bW6pTN-YnPeHtedJsYrALAcEey1c6BfwBayQ8PwKp4goypvJF-z8=s32-p-k");
     background-color: grey;
 }
   
@@ -45,7 +43,7 @@ body {
     height: 10vh;
     font-size: 10vh;
     font-weight: 100;
-    color: black;
+    color: white;
     top: 12vh;
     left: 20vw;
     text-align: center;
@@ -66,12 +64,11 @@ body {
     color: gold;
 }
     </style>
-    <title>Flappy 9/11</title>
 </head>
   
 <body>
     <div class="background"></div>
-    <img class="bird" src="https://lh3.googleusercontent.com/pw/ADCreHeD0b45ialWExkbd26Aq4LRON_GLWIhwgDQTfVQbm7LBAoeGmY4uauHjK-MDggzSvI7l--iFNrcjxTU74iWOHrqBycCohsDqWKBlXj1zlTiAriVJ1Y=w2400">
+    <img class="bird" src="https://lh3.googleusercontent.com/pw/ADCreHfxEf6gKdo_hPEfjNTO-IvI9wHYYhps_0OBsunez9GDwJ-8CrQ-mUgPiGpYZpBcjbmiMAm7TwVtB0Lki47vhUK975J_bamUvrgedOWXeLpmIv0kaDI=w2400">
     <div class="message">
         Press Enter To Start Game
     </div>
@@ -188,7 +185,11 @@ body {
               if (e.key == 'ArrowUp' || e.key == ' ') {
                 bird_dy = -7.6;
               }
+              if (e.touch == 'touch') {
+                  bird_dy = -7.6;
+              }
             });
+
           
             // Collision detection with bird and
             // window top and bottom
